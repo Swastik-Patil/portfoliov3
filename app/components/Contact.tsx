@@ -1,45 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-// import { useToast } from "@/components/ui/use-toast";
 
 export default function Contact() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  // const { toast } = useToast();
-
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   // Here you would typically send the form data to your backend
-  //   // For this example, we'll just simulate a successful submission
-  //   await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate network request
-
-  //   toast({
-  //     title: "Message Sent!",
-  //     description: "Thanks for reaching out. I'll get back to you soon!",
-  //   });
-
-  //   // Reset form
-  //   setFormState({ name: "", email: "", message: "" });
-  // };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <section id="contact" className="py-20">
       <motion.div
@@ -52,8 +19,7 @@ export default function Contact() {
           Get In Touch
         </h2>
         <form
-          // onSubmit={handleSubmit}
-          action={"https://formsubmit.co/swastik592@gmail.com"}
+          action={"https://formsubmit.co/2103cd8425e2b6b435b9a13234b46f4a"}
           method="POST"
           className="max-w-lg mx-auto space-y-6"
         >
@@ -68,8 +34,6 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
-              value={formState.name}
-              onChange={handleChange}
               required
               className="w-full"
             />
@@ -85,8 +49,6 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              value={formState.email}
-              onChange={handleChange}
               required
               className="w-full"
             />
@@ -101,8 +63,6 @@ export default function Contact() {
             <Textarea
               id="message"
               name="message"
-              value={formState.message}
-              onChange={handleChange}
               required
               rows={4}
               className="w-full"

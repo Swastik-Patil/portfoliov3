@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/app/globals.css";
-import { ToastProvider } from "@/components/ui/toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,17 +29,10 @@ export default function RootLayout({
         <link rel="manifest" href="./site.webmanifest" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ToastProvider>
-            <div className="min-h-screen bg-background text-foreground">
-              {children}
-            </div>
-          </ToastProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <div className="min-h-screen bg-background text-foreground">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

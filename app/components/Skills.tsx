@@ -1,6 +1,5 @@
 import { Laptop, Server, Wrench, Languages } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const skillCategories = [
   {
@@ -94,7 +93,7 @@ export default function Skills() {
                         skill.name === "Next.js" ? "bg-white" : "bg-card"
                       } text-card-foreground rounded-full p-4 mb-2 shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-110`}
                     >
-                      <Image
+                      <img
                         alt={skill.name}
                         src={skill.iconpath}
                         width={32}
