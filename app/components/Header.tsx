@@ -25,8 +25,8 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <ul className="flex space-x-8">
+      <nav className="container mx-auto px-6 py-4 flex justify-center md:justify-between items-center">
+        <ul className="hidden md:flex space-x-8">
           {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
@@ -39,7 +39,7 @@ export default function Header() {
           ))}
         </ul>
         <div className="flex items-center gap-8">
-          <Socials sz={24} />
+          <Socials />
           <ThemeToggle />
         </div>
       </nav>

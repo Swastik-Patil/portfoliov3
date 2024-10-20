@@ -1,7 +1,7 @@
 import React from "react";
 import { Linkedin, Github, File } from "lucide-react";
 
-const Socials = ({ sz }: { sz: number }) => {
+const Socials = () => {
   return (
     <div className="flex space-x-8">
       <a
@@ -10,7 +10,7 @@ const Socials = ({ sz }: { sz: number }) => {
         target="_blank"
         aria-label="linkedin"
       >
-        <Linkedin size={sz} />
+        <Linkedin size={24} />
       </a>
       <a
         href="https://github.com/Swastik-Patil"
@@ -18,7 +18,7 @@ const Socials = ({ sz }: { sz: number }) => {
         target="_blank"
         aria-label="github"
       >
-        <Github size={sz} />
+        <Github size={24} />
       </a>
       <a
         href="https://drive.google.com/file/d/1pIEkGbWrTg9TLzT1haOqGeYJU0cVrwuF/view?usp=sharing"
@@ -26,7 +26,7 @@ const Socials = ({ sz }: { sz: number }) => {
         target="_blank"
         aria-label="file"
       >
-        <File size={sz} />
+        <File size={24} />
       </a>
     </div>
   );

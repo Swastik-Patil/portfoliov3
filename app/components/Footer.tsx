@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Socials from "./Socials";
 
 export default function Footer() {
   return (
@@ -15,7 +14,6 @@ export default function Footer() {
           <p className="text-gray-400 mb-4 md:mb-0">
             © {new Date().getFullYear()} Swastik Patil. All rights reserved.
           </p>
-          <Socials sz={32} />
         </div>
       </div>
     </motion.footer>
