@@ -14,6 +14,10 @@ export function ThemeToggle() {
     setTheme(isDark ? "light" : "dark");
   };
 
+  React.useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
   return (
     <Button size="icon" onClick={toggleTheme} aria-label="Toggle theme">
       {isDark ? (

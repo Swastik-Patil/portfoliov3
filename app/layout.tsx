@@ -27,6 +27,7 @@ export default function RootLayout({
         />
         <meta name="apple-mobile-web-app-title" content="Swastik" />
         <link rel="manifest" href="./site.webmanifest" />
+        <title>Swastik Patil</title>
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
