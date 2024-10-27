@@ -27,7 +27,7 @@ export default function Header() {
     >
       <nav className="container mx-auto px-6 py-4 flex justify-center md:justify-between items-center">
         <ul className="hidden md:flex space-x-8">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+          {["Home", "Skills", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
